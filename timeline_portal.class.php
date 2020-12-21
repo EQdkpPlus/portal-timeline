@@ -87,8 +87,10 @@ class timeline_portal extends portal_generic {
 		
 		//fetch all articles
 		$arrArticles = $arrSortedArticles = array();
-		foreach($arrCategories as $intCategoryID){
-			$arrArticles = array_merge($arrArticles, $this->pdh->get('article_categories', 'published_id_list', array($intCategoryID, $this->user->id)));
+		if(is_array($arrCategories)){
+			foreach($arrCategories as $intCategoryID){
+				$arrArticles = array_merge($arrArticles, $this->pdh->get('article_categories', 'published_id_list', array($intCategoryID, $this->user->id)));
+			}
 		}
 		
 		$arrArticles = array_unique($arrArticles);
