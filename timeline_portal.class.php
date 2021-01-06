@@ -28,7 +28,7 @@ class timeline_portal extends portal_generic {
 	protected static $path	= 'timeline';
 	protected static $data	= array(
 		'name'			=> 'timeline',
-		'version'		=> '0.1.0',
+		'version'		=> '0.1.1',
 		'author'		=> 'Asitara',
 		'contact'		=> EQDKP_PROJECT_URL,
 		'description'	=> 'Shows a timeline of your articles',
